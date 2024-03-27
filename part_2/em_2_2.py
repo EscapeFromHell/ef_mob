@@ -171,6 +171,7 @@ class SpimexParser:
             try:
                 if "Единица измерения: Метрическая тонна" in row.iloc[1]:
                     target = index
+                    break
             except TypeError:
                 pass
         df = df.iloc[target + 2:]
